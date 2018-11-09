@@ -44,7 +44,7 @@ def restart_database():
     if CONF['database_type'] == 'postgres':
         cmd = 'sudo service postgresql restart'
     elif CONF['database_type'] == 'mysql':
-        cmd = 'sudo service mysql restart'
+        cmd = 'sudo service mysqld restart'
     else:
         raise Exception("Database Type {} Not Implemented !".format(CONF['database_type']))
     local(cmd)
